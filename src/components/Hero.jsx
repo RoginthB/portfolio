@@ -1,5 +1,5 @@
 import React from 'react'
-
+import profileImg from '../images/profile.jpg';
 export default function Hero() {
     return (
         <section className="hero modern-hero">
@@ -59,7 +59,7 @@ export default function Hero() {
                             */}
                             {
                                 <img
-                                    src="/src/images/profile.jpg"
+                                    src={profileImg}
                                     alt="Roginth B"
                                     className="avatar-img"
                                     onError={(e) => {

@@ -100,7 +100,7 @@ export default function Contact() {
             ))}
           </div>
 
-          <p style={{ marginTop: '1rem' }}>
+          <p style={{ marginTop: '2rem' }}>
             <a className="secondary-btn" href="https://drive.google.com/file/d/14BnBlW18mflrhqqjgvTeQrJFZ7DbqX0a/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Resume</a>
           </p>
         </div>

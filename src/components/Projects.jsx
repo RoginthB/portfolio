@@ -82,7 +82,7 @@ export default function Projects() {
       {projects.filter((p) => p.featured).map((project) => (
         <div key={project.title} className="project-featured classy">
           <div className="project-image">
-            <img src={project.image} alt={project.title} className="bw-image" />
+            <img src={project.image} alt={project.title}  />
           </div>
           <div className="project-info">
             <h3>{project.title}</h3>
@@ -92,7 +92,7 @@ export default function Projects() {
                 <span key={tech} className="tech-tag">{tech}</span>
               ))}
             </div>
-            <div className="project-links">
+            <div className="project-links" style={{padding:3}}>
               <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
               <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
             </div>
@@ -115,7 +115,7 @@ export default function Projects() {
                   <span key={tech} className="tech-tag">{tech}</span>
                 ))}
               </div>
-              <div className="project-links">
+              <div className="project-links" style={{padding:3}}>
                 <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
                 <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
               </div>
