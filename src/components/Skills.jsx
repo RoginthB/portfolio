@@ -32,19 +32,19 @@ export default function Skills() {
     },
     {
       category: 'Backend & Databases',
-      items: ['Node Js', 'Express Js', 'MongoDB', 'REST APIs', 'GraphQL']
+      items: ['Pyhton', 'Node Js', 'Express Js', 'MongoDB', '.Net C#']
     },
     {
       category: 'Mobile & Hybrid',
-      items: ['React Native', 'Expo', 'Cross-platform UIs']
+      items: ['React Native']
     },
     {
       category: 'Cloud, AI & Tools',
-      items: ['Google Cloud Platform (GCP)', 'OpenAI / LLM APIs', 'Machine Learning', 'TensorFlow', 'PyTorch', 'Git & CI/CD']
+      items: ['Google Cloud Platform (GCP)', 'OpenAI / LLM APIs', 'NxOpen API', 'Git']
     },
     {
       category: 'Design & UX',
-      items: ['Illustrator', 'Photoshop', 'Adobe XD', 'Figma', 'Design Systems']
+      items: ['Illustrator', 'Photoshop', 'Adobe XD', 'Figma']
     }
   ]
 
@@ -107,6 +107,43 @@ function getIcon(name) {
     )
   }
 
+  // HTML5
+  if (key.includes('html')) {
+    return (
+      <svg className="skill-icon" viewBox="0 0 64 64" aria-hidden>
+        <rect width="64" height="64" rx="10" fill="#e34f26" />
+        <text x="50%" y="58%" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="700">HTML</text>
+      </svg>
+    )
+  }
+
+  // CSS3 (covers Tailwind / CSS Modules labels that include 'css' or 'tailwind')
+  if (key.includes('css') || key.includes('tailwind')) {
+    // Tailwind will match here too and get a teal-ish tile
+    const color = key.includes('tailwind') ? '#06b6d4' : '#1572b6'
+    const label = key.includes('tailwind') ? 'TW' : 'CSS'
+    return (
+      <svg className="skill-icon" viewBox="0 0 64 64" aria-hidden>
+        <rect width="64" height="64" rx="10" fill={color} />
+        <text x="50%" y="58%" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="700">{label}</text>
+      </svg>
+    )
+  }
+
+  // Generic API / NxOpen API (Nx, NxOpen, API mentions)
+  if (key.includes('nxopen') || key.includes('nx') || key.includes(' api')) {
+    return (
+      <svg className="skill-icon" viewBox="0 0 64 64" aria-hidden>
+        <rect width="64" height="64" rx="10" fill="#111827" />
+        <g fill="none" stroke="#fff" strokeWidth="2" transform="translate(8,12)">
+          <rect width="48" height="40" rx="4" />
+          <path d="M6 18h36" />
+          <circle cx="10" cy="10" r="3" fill="#fff" />
+        </g>
+      </svg>
+    )
+  }
+
   if (key.includes('java') || key === 'javascript' || key.includes('js')) {
     return (
       <svg className="skill-icon" viewBox="0 0 64 64" aria-hidden>
@@ -124,7 +161,7 @@ function getIcon(name) {
     )
   }
 
-  if (key.includes('python')) {
+  if (key.includes('python') || key.includes('pyhton')) {
     return (
       <svg className="skill-icon" viewBox="0 0 64 64" aria-hidden>
         <rect width="64" height="64" rx="10" fill="#306998" />
