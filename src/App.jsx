@@ -1,14 +1,20 @@
 import React from 'react'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
   return (
     <div className="app">
-      <header>
-        <h1>Portfolio</h1>
-      </header>
+      <Hero />
       <main>
-        <p>Welcome to your new React app scaffolded with Vite.</p>
+        {/* <About /> */}
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
       <Footer />
     </div>
