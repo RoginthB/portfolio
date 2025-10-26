@@ -106,7 +106,7 @@ export default function Contact() {
         </div>
 
         <form className="contact-form modern-form" onSubmit={handleSubmit} noValidate>
-        <div className="form-row" style={{marginBottom:10}}>
+        <div className="form-row" style={{marginBottom:"30px"}}>
             <div className="input-group" >
               <input
                 className={`modern-input ${errors.name && touched.name ? 'invalid' : ''}`}
