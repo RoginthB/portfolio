@@ -5,11 +5,11 @@ export default function Projects() {
   const projects = [
     
     {
-      title: 'CricketWithAI (GenAI-Powered Next Js app)',
+      title: 'CricketWithAI (GenAI-Powered MERN app)',
       description:
         'CricketWithAI is an AI-powered cricket score and analytics platform built on the MERN stack, offering real-time updates, player stats, and match predictions with a seamless, interactive experience.',
       image: cricketwithaiImg,
-      tech: ['React',"Next Js", 'TypeScript', 'Gemini Api', 'AI'],
+      tech: ['React',"Node.js", 'TypeScript', 'Gemini Api', 'AI'],
       links: { live: 'https://cricketwithai.netlify.app/', code: 'https://github.com/roginthb/cricketwithai' }
     },
 
