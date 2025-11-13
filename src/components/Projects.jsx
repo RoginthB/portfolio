@@ -1,5 +1,6 @@
 import React from 'react'
 import cricketwithaiImg from '../images/cricketwithai.png'
+import askqImg from '../images/Askq-ai.png'
 
 export default function Projects() {
   const projects = [
@@ -9,8 +10,16 @@ export default function Projects() {
       description:
         'CricketWithAI is an AI-powered cricket score and analytics platform built on the MERN stack, offering real-time updates, player stats, and match predictions with a seamless, interactive experience.',
       image: cricketwithaiImg,
-      tech: ['React',"Node.js", 'TypeScript', 'Gemini Api', 'AI'],
-      links: { live: 'https://cricketwithai.netlify.app/', code: 'https://github.com/roginthb/cricketwithai' }
+      tech: ['React', 'TypeScript', 'Gemini Api', 'Google AI Studio',"VibeCode"],
+      links: { live: 'https://cricketwithai.netlify.app/', code: 'https://github.com/RoginthB/Cricket-with-Ai' }
+    },
+
+    {
+      title: "AskQ (AI chatbot platform)",
+      description:"AskQ is an AI-powered Chatbot. like a mini version of ChatGPT, built using Python and Streamlit.",
+      image:askqImg,
+      tech: ['Python', 'Streamlit', 'Gemini API', 'AI'],
+      links: { live: 'https://askq-ai.streamlit.app/', code: "https://github.com/RoginthB/AskQ_Streamlit"}
     },
 
     // User-provided project list (added)
@@ -20,7 +29,7 @@ export default function Projects() {
         'Emergency assistance platform connecting users to nearby resources and volunteers in real time. Features geolocation, request routing, notifications and an admin dashboard.',
       image: 'https://roginthb.github.io/designer-roginth-V2.0.1/kauverySOS.png',
       tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-      links: { live: 'https://kauvery.netlify.app/', code: 'https://github.com/roginthb' }
+      links: { live: 'https://kauvery.netlify.app/', code: 'https://github.com/RoginthB/Kauvery' }
     },
     // Featured classy project
     {
@@ -29,7 +38,7 @@ export default function Projects() {
         'Featured: Favor is an image-rating application where users upload and rate images, vote in real-time, and discover popular content through leaderboards. Built as a MERN full-stack app with real-time updates, user profiles, comment threads, image moderation tools and a responsive, accessible UI.',
       image: 'https://roginthb.github.io/designer-roginth-V2.0.1/favor.png',
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Material UI'],
-      links: { live: 'https://favor-app.netlify.app/', code: 'https://github.com/roginthb' },
+      links: { live: 'https://favor-app.netlify.app/', code: 'https://github.com/RoginthB/Favor_App' },
       // Featured classy project
       featured: true
     },

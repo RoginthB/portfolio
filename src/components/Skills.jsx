@@ -28,7 +28,7 @@ export default function Skills() {
   const categories = [
     {
       category: 'Frontend',
-      items: ['React JS', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind / CSS Modules']
+      items: ['React JS', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind / CSS Modules',"streamlit"]
     },
     {
       category: 'Backend & Databases',
@@ -40,7 +40,7 @@ export default function Skills() {
     },
     {
       category: 'Cloud, AI & Tools',
-      items: ['Google Cloud Platform (GCP)', 'OpenAI / LLM APIs', 'NxOpen API', 'Git']
+      items: ['Google Cloud Platform (GCP)', 'OpenAI API',"Gemini API","RAG","langchain", 'NxOpen API', 'Git']
     },
     {
       category: 'Design & UX',
