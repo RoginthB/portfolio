@@ -1,25 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import cricketwithaiImg from '../images/cricketwithai.png'
 import askqImg from '../images/Askq-ai.png'
 
+const ProjectCard = ({ project }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const MAX_LENGTH = 100; // Character count threshold for truncation
+  const showButton = project.description.length > MAX_LENGTH;
+
+  return (
+    <div className="project-card">
+      <div className="project-image">
+        <img src={project.image} alt={project.title} />
+        <div className="project-overlay">
+          <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="primary-btn" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>View Live</a>
+        </div>
+      </div>
+      <div className="project-info">
+        <h3>{project.title}</h3>
+
+        <div className="project-description-container">
+          <p className={!isExpanded ? 'line-clamp-3' : ''}>
+            {project.description}
+          </p>
+          {showButton && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="read-more-btn"
+            >
+              {isExpanded ? 'Show Less' : 'Read More'}
+            </button>
+          )}
+        </div>
+
+        <div className="project-tech">
+          {project.tech.map((tech) => (
+            <span key={tech} className="tech-tag">{tech}</span>
+          ))}
+        </div>
+        <div className="project-links" style={{ padding: 3 }}>
+          <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
+          <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Projects() {
   const projects = [
-    
+
     {
       title: 'CricketWithAI (GenAI-Powered MERN app)',
       description:
         'CricketWithAI is an AI-powered cricket score and analytics platform built on the MERN stack, offering real-time updates, player stats, and match predictions with a seamless, interactive experience.',
       image: cricketwithaiImg,
-      tech: ['React', 'TypeScript', 'Gemini Api', 'Google AI Studio',"VibeCode"],
+      tech: ['React', 'TypeScript', 'Gemini Api', 'Google AI Studio', "VibeCode"],
       links: { live: 'https://cricketwithai.netlify.app/', code: 'https://github.com/RoginthB/Cricket-with-Ai' }
     },
 
     {
       title: "AskQ (AI chatbot platform)",
-      description:"AskQ is an AI-powered Chatbot. like a mini version of ChatGPT, built using Python and Streamlit.",
-      image:askqImg,
+      description: "AskQ is an AI-powered Chatbot. like a mini version of ChatGPT, built using Python and Streamlit.",
+      image: askqImg,
       tech: ['Python', 'Streamlit', 'Gemini API', 'AI'],
-      links: { live: 'https://askq-ai.streamlit.app/', code: "https://github.com/RoginthB/AskQ_Streamlit"}
+      links: { live: 'https://askq-ai.streamlit.app/', code: "https://github.com/RoginthB/AskQ_Streamlit" }
     },
 
     // User-provided project list (added)
@@ -91,7 +135,7 @@ export default function Projects() {
       links: { live: 'https://roginthb.github.io/designerrohinth.tk/', code: 'https://github.com/roginthb' }
     }
 
-    
+
   ]
 
   return (
@@ -101,7 +145,7 @@ export default function Projects() {
       {projects.filter((p) => p.featured).map((project) => (
         <div key={project.title} className="project-featured classy">
           <div className="project-image">
-            <img src={project.image} alt={project.title}  />
+            <img src={project.image} alt={project.title} />
           </div>
           <div className="project-info">
             <h3>{project.title}</h3>
@@ -111,7 +155,7 @@ export default function Projects() {
                 <span key={tech} className="tech-tag">{tech}</span>
               ))}
             </div>
-            <div className="project-links" style={{padding:3}}>
+            <div className="project-links" style={{ padding: 3 }}>
               <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
               <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
             </div>
@@ -122,24 +166,7 @@ export default function Projects() {
 
       <div className="projects-grid">
         {projects.filter((p) => !p.featured).map((project) => (
-          <div key={project.title} className="project-card">
-            <div className="project-image">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-tech">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="tech-tag">{tech}</span>
-                ))}
-              </div>
-              <div className="project-links" style={{padding:3}}>
-                <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
-                <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </div>
-          </div>
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </section>

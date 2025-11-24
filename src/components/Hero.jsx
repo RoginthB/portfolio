@@ -1,76 +1,106 @@
 import React from 'react'
-import profileImg from '../images/profile.jpg';
+import profileImg from '../images/profile.jpg'
+
 export default function Hero() {
     return (
         <section className="hero modern-hero">
-            <div className="hero-content app">
+            <div className="hero-content">
                 <div className="hero-grid">
                     <div className="hero-left">
-                        <span className="eyebrow">Hi, I'm</span>
-                        <h1 className="hero-title">Roginth B</h1>
-                        <p className="hero-sub">AI-Powered Full-stack Developer</p>
+                        <div className="hero-badge">
+                            <span className="badge-dot"></span>
+                            <span>Available for work</span>
+                        </div>
+
+                        <h1 className="hero-title">
+                            <span className="greeting">Hi, I'm</span>
+                            <span className="name-highlight">Roginth B</span>
+                        </h1>
+
+                        <p className="hero-subtitle">AI-Powered Full-stack Developer</p>
 
                         <p className="hero-description">
                             I build clean, accessible interfaces and delightful user experiences — combining
                             thoughtful design with modern React-driven frontends.
                         </p>
-                        <div className="skill-row">
-                            <span className="skill-pill">MERN</span>
-                            <span className="skill-pill">GenAI</span>
-                            <span className="skill-pill">JavaScript</span>
-                            <span className="skill-pill">Python</span>
-                            <span className="skill-pill">.Net C#</span>
+
+                        <div className="skill-tags">
+                            <span className="skill-tag">MERN</span>
+                            <span className="skill-tag">GenAI</span>
+                            <span className="skill-tag">JavaScript</span>
+                            <span className="skill-tag">Python</span>
+                            <span className="skill-tag">.Net C#</span>
                         </div>
+
                         <div className="hero-actions">
-                            <a href="#contact" className="primary-btn">Let's Connect</a>
+                            <a href="#contact" className="primary-btn">
+                                <span>Let's Connect</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M1 8h14M8 1l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </a>
                             <a href="#projects" className="secondary-btn">See Projects</a>
                         </div>
+
                         <div className="hero-stats">
-                            <div className="stat">
+                            <div className="stat-item">
                                 <div className="stat-number">3+</div>
                                 <div className="stat-label">Years experience</div>
                             </div>
-                            <div className="stat">
+                            <div className="stat-divider"></div>
+                            <div className="stat-item">
                                 <div className="stat-number">10+</div>
                                 <div className="stat-label">Projects Developed</div>
                             </div>
                         </div>
-
                     </div>
 
-                    <div className="hero-right" aria-hidden>
-                        <div className="profile-visual">
-                            {/* decorative blob + avatar image (falls back to initials) */}
-                            {/* <svg className="blob" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden>
-                                <defs>
-                                    <linearGradient id="gHero" x1="0" x2="1">
-                                        <stop offset="0" stopColor="#60a5fa" />
-                                        <stop offset="1" stopColor="#2563eb" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#gHero)" d="M331.9,280.7Q312,321,274.7,338.6Q237.3,356.1,197.8,363.2Q158.3,370.4,120.9,351.7Q83.5,333,58.6,297.8Q33.7,262.7,43.9,221.2Q54.1,179.7,77.6,147Q101.1,114.3,137.6,96.3Q174.1,78.3,214.1,72.2Q254.1,66.1,292,83.8Q329.9,101.5,343.1,140.5Q356.3,179.5,331.9,280.7Z" />
-                            </svg> */}
+                    <div className="hero-right">
+                        <div className="creative-image-wrapper">
+                            {/* Geometric Background Elements */}
+                            <div className="geo-shape shape-1"></div>
+                            <div className="geo-shape shape-2"></div>
+                            <div className="geo-shape shape-3"></div>
 
-                            {/*
-                              Place your profile photo at one of these locations so the image loads correctly:
-                              - public/profile.jpg  -> use src="/profile.jpg"
-                              - src/images/profile.jpg (Vite import required) -> use an import
-                              Below we reference `/profile.jpg` which will work if you place the attached image in the project's `public/` folder named `profile.jpg`.
-                            */}
-                            {
+                            {/* Main Image Card */}
+                            <div className="image-card">
+                                <div className="card-glow"></div>
                                 <img
                                     src={profileImg}
                                     alt="Roginth B"
-                                    className="avatar-img"
+                                    className="profile-img"
                                     onError={(e) => {
-                                        // hide broken image and leave initials avatar as fallback
                                         e.currentTarget.style.display = 'none'
                                     }}
                                 />
-                                ||
-                                <div className="avatar">RB</div>
-                            }
+                                {/* Corner Accents */}
+                                <div className="corner-accent corner-tl"></div>
+                                <div className="corner-accent corner-br"></div>
+                            </div>
 
+                            {/* Floating Elements */}
+                            <div className="float-element elem-1">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="28" fill="none" stroke="url(#grad1)" strokeWidth="3" />
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stopColor="#667eea" />
+                                            <stop offset="100%" stopColor="#764ba2" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div className="float-element elem-2">
+                                <svg width="50" height="50" viewBox="0 0 50 50">
+                                    <rect x="5" y="5" width="40" height="40" fill="none" stroke="url(#grad2)" strokeWidth="3" transform="rotate(45 25 25)" />
+                                    <defs>
+                                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stopColor="#f093fb" />
+                                            <stop offset="100%" stopColor="#f5576c" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
