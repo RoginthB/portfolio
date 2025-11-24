@@ -37,7 +37,7 @@ const ProjectCard = ({ project }) => {
             <span key={tech} className="tech-tag">{tech}</span>
           ))}
         </div>
-        <div className="project-links" style={{ padding: 3 }}>
+        <div className="project-links">
           <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
           <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
         </div>
@@ -155,7 +155,7 @@ export default function Projects() {
                 <span key={tech} className="tech-tag">{tech}</span>
               ))}
             </div>
-            <div className="project-links" style={{ padding: 3 }}>
+            <div className="project-links">
               <a className="primary-btn" href={project.links.live} target="_blank" rel="noopener noreferrer">Live</a>
               <a className="secondary-btn" href={project.links.code} target="_blank" rel="noopener noreferrer">Code</a>
             </div>

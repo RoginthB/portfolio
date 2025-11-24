@@ -106,14 +106,14 @@ export default function Contact() {
         </div>
 
         <form className="contact-form modern-form" onSubmit={handleSubmit} noValidate>
-        <div className="form-row" style={{marginBottom:"30px"}}>
+          <div className="form-row" style={{ marginBottom: "20px" }}>
             <div className="input-group" >
               <input
                 className={`modern-input ${errors.name && touched.name ? 'invalid' : ''}`}
                 id="name"
                 name="name"
                 value={form.name}
-                
+
                 onChange={handleChange}
                 onBlur={() => setTouched({ ...touched, name: true })}
                 required
@@ -130,7 +130,7 @@ export default function Contact() {
                 id="email"
                 name="email"
                 type="email"
-                
+
 
                 value={form.email}
                 onChange={handleChange}
@@ -148,7 +148,6 @@ export default function Contact() {
             <textarea
               className={`modern-textarea ${errors.message && touched.message ? 'invalid' : ''}`}
               id="message"
-              style={{padding:3}}
               name="message"
               value={form.message}
               onChange={handleChange}
@@ -163,7 +162,7 @@ export default function Contact() {
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="primary-btn modern-submit" style={{border:'none'}}>Send message</button>
+            <button type="submit" className="primary-btn modern-submit" style={{ border: 'none' }}>Send message</button>
             {/* <a className="secondary-btn" href="mailto:roginthb@gmail.com">Email directly</a> */}
           </div>
         </form>
