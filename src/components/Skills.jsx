@@ -24,24 +24,25 @@ export default function Skills() {
   const categories = [
     {
       category: 'Frontend',
-      items: ['React JS', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind / CSS Modules', 'Streamlit']
+      items: ['React JS', 'JavaScript (ES6+)', "Next JS", 'HTML5', 'CSS3', 'Tailwind / CSS Modules', 'Streamlit']
     },
     {
       category: 'Backend & Databases',
       items: ['Python', 'Node Js', 'Express Js', 'MongoDB', '.Net C#']
     },
-    {
-      category: 'Mobile & Hybrid',
-      items: ['React Native']
-    },
+
     {
       category: 'Cloud, AI & Tools',
-      items: ['Google Cloud Platform (GCP)', 'OpenAI API', 'Gemini API', 'RAG', 'LangChain', 'NxOpen API', 'Git']
+      items: ['Ollama', "Google AI Studio", "LangGraph", "LangChain", 'OpenAI API', 'Gemini API', 'RAG', "NxOpen API", 'Git']
     },
     {
       category: 'Design & UX',
       items: ['Illustrator', 'Photoshop', 'Adobe XD', 'Figma']
-    }
+    },
+    {
+      category: 'Mobile & Hybrid',
+      items: ['React Native']
+    },
   ]
 
   return (

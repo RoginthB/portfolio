@@ -17,7 +17,7 @@ export default function Hero() {
                             <span className="name-highlight">Roginth B</span>
                         </h1>
 
-                        <p className="hero-subtitle">AI-Powered Full-stack Developer</p>
+                        <p className="hero-subtitle">AI Application Engineer</p>
 
                         <p className="hero-description">
                             I build clean, accessible interfaces and delightful user experiences — combining

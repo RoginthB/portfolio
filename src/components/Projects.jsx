@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import cricketwithaiImg from '../images/cricketwithai.png'
-import askqImg from '../images/Askq-ai.png'
+import askqImg from '../images/askq-ai.png'
+import csvRagImg from '../images/csv-rag.png'
+import webRagImg from '../images/web-rag.png'
 
 const ProjectCard = ({ project }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -57,15 +59,34 @@ export default function Projects() {
       tech: ['React', 'TypeScript', 'Gemini Api', 'Google AI Studio', "VibeCode"],
       links: { live: 'https://cricketwithai.netlify.app/', code: 'https://github.com/RoginthB/Cricket-with-Ai' }
     },
-
     {
       title: "AskQ (AI chatbot platform)",
-      description: "AskQ is an AI-powered Chatbot. like a mini version of ChatGPT, built using Python and Streamlit.",
+      description: "AskQ is an AI-powered Chatbot. like a mini version of ChatGPT and Create Rag, built using Python and NextJS.",
       image: askqImg,
-      tech: ['Python', 'Streamlit', 'Gemini API', 'AI'],
-      links: { live: 'https://askq-ai.streamlit.app/', code: "https://github.com/RoginthB/AskQ_Streamlit" }
+      tech: ['Python', 'NextJS', 'Gemini API', 'AI'],
+      links: { live: 'https://askq-ai.netlify.app/', code: "https://github.com/RoginthB/AskQ-NextJS" }
     },
-
+    {
+      title: "CSV RAG (AI chatbot platform)",
+      description: "CSV RAG is an AI-powered Chatbot. like a mini version of ChatGPT and Create Rag, built using Python and NextJS.",
+      image: csvRagImg,
+      tech: ['Python', 'Streamlit', 'langchain', 'Gemini API', 'AI'],
+      links: { live: 'https://askq-ai-csv.streamlit.app/', code: "https://github.com/RoginthB/CSV-RAG" }
+    },
+    {
+      title: "Web RAG (AI chatbot platform)",
+      description: "Web RAG is an AI-powered Chatbot. like a mini version of ChatGPT and Create Rag, built using Python and NextJS.",
+      image: webRagImg,
+      tech: ['Python', 'Streamlit', 'langchain', 'Gemini API', 'AI'],
+      links: { live: 'https://askq-ai-web.streamlit.app/', code: "https://github.com/RoginthB/Web-RAG" }
+    },
+    {
+      title: "AskQ (AI chatbot platform)",
+      description: "AskQ is an AI-powered Chatbot. like a mini version of ChatGPT and Create Rag, built using Python and NextJS.",
+      image: askqImg,
+      tech: ['Python', 'NextJS', 'Gemini API', 'AI'],
+      links: { live: 'https://askq-ai.netlify.app/', code: "https://github.com/RoginthB/AskQ-NextJS" }
+    },
     // User-provided project list (added)
     {
       title: 'Kauvery SOS app (MERN fullstack)',
@@ -87,14 +108,6 @@ export default function Projects() {
       featured: true
     },
     {
-      title: 'Mi food (Dribbble inspired)',
-      description:
-        'A responsive landing and UI inspired by Dribbble concepts — focused on elegant typography, imagery and micro-interactions for a food brand.',
-      image: 'https://roginthb.github.io/designer-roginth-V2.0.1/miFood.png',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      links: { live: 'https://roginthb.github.io/mi-food/', code: 'https://github.com/roginthb' }
-    },
-    {
       title: 'Adobe Stock (Clone website)',
       description:
         'A UI clone of Adobe Stock showcasing responsive search results, image previews and a clean marketplace layout — useful as a visual and interaction prototype.',
@@ -111,29 +124,37 @@ export default function Projects() {
       links: { live: 'https://roginthb.github.io/sample/', code: 'https://github.com/roginthb' }
     },
     {
-      title: 'Instagram Home Page (Popular Website Clone)',
+      title: 'Mi food (Dribbble inspired)',
       description:
-        'A pixel-focused clone of Instagram’s home feed to practice responsive grid layouts, media handling and UI fidelity.',
-      image: 'https://roginthb.github.io/designer-roginth-V2.0.1/images/inatagram-clone.png',
+        'A responsive landing and UI inspired by Dribbble concepts — focused on elegant typography, imagery and micro-interactions for a food brand.',
+      image: 'https://roginthb.github.io/designer-roginth-V2.0.1/miFood.png',
       tech: ['HTML', 'CSS', 'JavaScript'],
-      links: { live: 'https://roginthb.github.io/instagram-home-clone/', code: 'https://github.com/roginthb' }
-    },
-    {
-      title: 'Project Gallery (image gallery website)',
-      description:
-        'An image gallery website with filtering, lightbox previews and responsive masonry layout — built for showcasing creative work.',
-      image: 'https://roginthb.github.io/designer-roginth-V2.0.1/images/dashboard.png',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      links: { live: 'https://roginthb.github.io/projectgallery/', code: 'https://github.com/roginthb' }
-    },
-    {
-      title: 'Designerroginth V1.0.1 (portfolio website)',
-      description:
-        'Personal portfolio showcasing projects, case studies and contact information. Clean layout and performance-focused build.',
-      image: 'https://roginthb.github.io/designer-roginth-V2.0.1/images/designerroginth.png',
-      tech: ['React', 'CSS'],
-      links: { live: 'https://roginthb.github.io/designerrohinth.tk/', code: 'https://github.com/roginthb' }
+      links: { live: 'https://roginthb.github.io/mi-food/', code: 'https://github.com/roginthb' }
     }
+    // {
+    //   title: 'Instagram Home Page (Popular Website Clone)',
+    //   description:
+    //     'A pixel-focused clone of Instagram’s home feed to practice responsive grid layouts, media handling and UI fidelity.',
+    //   image: 'https://roginthb.github.io/designer-roginth-V2.0.1/images/inatagram-clone.png',
+    //   tech: ['HTML', 'CSS', 'JavaScript'],
+    //   links: { live: 'https://roginthb.github.io/instagram-home-clone/', code: 'https://github.com/roginthb' }
+    // }
+    // {
+    //   title: 'Project Gallery (image gallery website)',
+    //   description:
+    //     'An image gallery website with filtering, lightbox previews and responsive masonry layout — built for showcasing creative work.',
+    //   image: 'https://roginthb.github.io/designer-roginth-V2.0.1/images/dashboard.png',
+    //   tech: ['HTML', 'CSS', 'JavaScript'],
+    //   links: { live: 'https://roginthb.github.io/projectgallery/', code: 'https://github.com/roginthb' }
+    // },
+    // {
+    //   title: 'Designerroginth V1.0.1 (portfolio website)',
+    //   description:
+    //     'Personal portfolio showcasing projects, case studies and contact information. Clean layout and performance-focused build.',
+    //   image: 'https://roginthb.github.io/designer-roginth-V2.0.1/images/designerroginth.png',
+    //   tech: ['React', 'CSS'],
+    //   links: { live: 'https://roginthb.github.io/designerrohinth.tk/', code: 'https://github.com/roginthb' }
+    // }
 
 
   ]
