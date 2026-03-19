@@ -3,7 +3,7 @@ import cricketwithaiImg from '../images/cricketwithai.png'
 import askqImg from '../images/askq-ai.png'
 import csvRagImg from '../images/csv-rag.png'
 import webRagImg from '../images/web-rag.png'
-import webresearchai from '.,/images/webresearchai.png'
+import webresearchai from '../images/webresearchai.png'
 
 const ProjectCard = ({ project }) => {
   const [isExpanded, setIsExpanded] = useState(false);
