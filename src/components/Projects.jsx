@@ -24,6 +24,16 @@ export default function Projects() {
       featured: true
     },
     {
+      title: 'Web Research Ai (fullstack)',
+      description:
+        'Web Search AI is an intelligent assistant that finds information from the web and answers your questions instantly. It combines AI reasoning with real-time search to give fast, accurate results.',
+      image: 'https://roginthb.github.io/portfolio/webresearchai.png',
+      
+      tech: ['React', 'Python', 'LangGraph', 'FastAPI', 'Gemini API'],
+      
+      links: { live: 'https://webresearchai.netlify.app/', code: 'https://github.com/roginthb' },
+    },
+    {
       title: 'Mi food (Dribbble inspired)',
       description:
         'A responsive landing and UI inspired by Dribbble concepts — focused on elegant typography, imagery and micro-interactions for a food brand.',
