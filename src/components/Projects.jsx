@@ -3,6 +3,7 @@ import cricketwithaiImg from '../images/cricketwithai.png'
 import askqImg from '../images/askq-ai.png'
 import csvRagImg from '../images/csv-rag.png'
 import webRagImg from '../images/web-rag.png'
+import webresearchai from '.,/images/webresearchai.png'
 
 const ProjectCard = ({ project }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -50,7 +51,16 @@ const ProjectCard = ({ project }) => {
 
 export default function Projects() {
   const projects = [
-
+  {
+      title: 'Web Research Ai (fullstack)',
+      description:
+        'Web Search AI is an intelligent assistant that finds information from the web and answers your questions instantly. It combines AI reasoning with real-time search to give fast, accurate results.',
+      image: webresearchai,
+      
+      tech: ['React', 'Python', 'LangGraph', 'FastAPI', 'Gemini API'],
+      
+      links: { live: 'https://webresearchai.netlify.app/', code: 'https://github.com/roginthb' },
+    },
     {
       title: 'CricketWithAI (GenAI-Powered MERN app)',
       description:
